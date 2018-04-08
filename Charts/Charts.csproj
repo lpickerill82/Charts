@@ -13,7 +13,7 @@
     <RootNamespace>TypeScriptHTMLApp1</RootNamespace>
     <AssemblyName>TypeScriptHTMLApp1</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -56,6 +56,34 @@
     <TypeScriptSourceRoot />
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="app.js" />
+    <Content Include="charts.html" />
+    <Content Include="Content\css\fontawesome-all.min.css" />
+    <Content Include="Content\css\style.min.css.map" />
+    <Content Include="gulpfile.js" />
+    <Content Include="Scripts\gridstack.jQueryUI.js" />
+    <Content Include="Scripts\gridstack.js" />
+    <Content Include="Src\SASS\base\_colors.scss" />
+    <Content Include="Src\SASS\base\_defaults.scss" />
+    <Content Include="Src\SASS\base\_font.scss" />
+    <Content Include="Src\SASS\base\_icons.scss" />
+    <Content Include="Src\SASS\base\_mediaQueries.scss" />
+    <Content Include="Src\SASS\base\_reset.scss" />
+    <Content Include="Src\SASS\components\_button.scss" />
+    <Content Include="Src\SASS\components\_chequeCanvas.scss" />
+    <Content Include="Src\SASS\components\_modal.scss" />
+    <Content Include="Src\SASS\components\_navigation.scss" />
+    <Content Include="Src\SASS\components\_typography.scss" />
+    <Content Include="Src\SASS\partial\_feature.scss" />
+    <Content Include="Src\SASS\partial\_footer.scss" />
+    <Content Include="Src\SASS\partial\_header.scss" />
+    <Content Include="Src\SASS\style.css.map" />
+    <Content Include="Src\SASS\style.scss" />
+    <Content Include="Src\SASS\components\_gridstack-extra.scss" />
+    <Content Include="Src\SASS\components\_gridstack.scss" />
+    <Content Include="Src\SASS\partial\_application.scss" />
+    <Content Include="Src\SASS\partial\_sidebar.scss" />
+    <Content Include="Src\SASS\components\_widget.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -65,17 +93,31 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app.css" />
+    <Content Include="Content\css\chosen-sprite%402x.png" />
+    <Content Include="Content\css\chosen-sprite.png" />
+    <Content Include="Content\css\chosen.bootstrap.min.css" />
+    <Content Include="Content\css\style.css" />
+    <Content Include="Content\css\style.min.css" />
     <Content Include="index.html" />
+    <Content Include="Scripts\canvasjs.min.js" />
+    <Content Include="Scripts\chosen.jquery.js" />
+    <Content Include="Src\SASS\style.min.css" />
+    <Content Include="Src\typescript\cheque.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="app.ts" />
+    <TypeScriptCompile Include="Scripts\chosen.jquery.d.ts" />
+    <TypeScriptCompile Include="Scripts\jquery.d.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Content\js\" />
     <Folder Include="Properties\" />
+    <Folder Include="Scripts\typings\" />
+    <Folder Include="Src\SASS\mixins\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -93,7 +135,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>10202</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:10202/</IISUrl>
+          <IISUrl>http://localhost/Charts</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

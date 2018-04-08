@@ -4,12 +4,647 @@
 <head>
     <meta charset="utf-8" />
     <title>TypeScript HTML App</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+    <link rel="stylesheet" href="Content/css/fontawesome-all.min.css" />
     <link rel="stylesheet" href="app.css" type="text/css" />
-    <script src="app.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <LINK href="Content/Css/style.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="Content/Css/chosen.bootstrap.min.css" />
+
+
+
+
+
+    <link rel="stylesheet prefetch" href="//cdnjs.cloudflare.com/ajax/libs/gridstack.js/0.2.5/gridstack.min.css">
+    <link rel="stylesheet prefetch" href="//cdnjs.cloudflare.com/ajax/libs/gridstack.js/0.2.5/gridstack-extra.min.css">
+
+    <style type="text/css">
+
+        .grid-stack-item-content {
+            background: white;
+            color: #2c3e50;
+            font-family: 'Indie Flower', cursive;
+            text-align: center;
+            font-size: 20px;
+        }
+
+            .grid-stack-item-content .fa {
+                font-size: 64px;
+                display: block;
+                margin: 20px 0 10px;
+            }
+
+
+
+        .darkblue {
+            background: #2c3e50;
+            color: #fff;
+        }
+
+        .section {
+            padding: 20px;
+        }
+
+        .darkblue hr.star-light::after {
+            background-color: #2c3e50;
+        }
+
+        .coverItemOne {
+            background: url('http://www.planwallpaper.com/static/images/518164-backgrounds.jpg');
+            background-size: cover;
+        }
+
+        .coverItemTwo {
+            background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD1kNFYk_d3bdJexXUcOr0J9YLFv1VrkeKkQGGyz_XaR7M947uDA');
+            background-size: cover;
+        }
+
+        i {
+            color: #333;
+            font-size: 24px;
+        }
+
+           
+    </style>
 </head>
 <body>
-    <h1>TypeScript HTML App</h1>
+    <header class="header-bar"> 
+        <div class="logo" style="display:inline-block; height:48px; padding-top:10px;padding-left:15px;">
+            <a href="#" style="color:#fff;">
+                Logo
+            </a>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="#"><i class="fas fa-user"></i></a></li>
+                <li><a href="#"><i class="fas fa-cog"></i></a></li>
+            </ul></nav>
+        
+    </header>
+    <aside class="sidebar-nav">
+        <span style="color:#333; padding-left:15px; padding-top:10px; display:block; height:48px;">Sidebar</span> 
+    </aside>
+    <section class="app-container">
 
-    <div id="content"></div>
+        <div class="container-fluid">
+            <h1>Dashboard</h1>
+        </div>
+        <section class="darklue" id="demo">
+            <div class="container-fluid">
+                
+        
+                <div class="grid-container " style="min-height:300px; padding:15px;">
+                    <div class="grid-stack" data-gs-animate="yes">
+                        <div class="grid-stack-item" data-gs-x="0" data-gs-y="0" data-gs-width="4" data-gs-height="6">
+                            <div class="grid-stack-item-content">
+                                <div id="lineChart" style="height: 320px; max-width: 450px; margin: 0px auto;"></div>
+                            </div>
+                        </div>
+                        <div class="grid-stack-item" data-gs-x="4" data-gs-y="0" data-gs-width="4" data-gs-height="6">
+                            <div class="grid-stack-item-content ">
+                                <div id="splineChart" style="height: 320px; max-width: 450px; margin: 0px auto;"></div>
+                            </div>
+                        </div>
+                        <div class="grid-stack-item" data-gs-x="8" data-gs-y="0" data-gs-width="4" data-gs-height="6">
+                            <div class="grid-stack-item-content">
+                                <div id="donutChart" style="height: 320px; max-width: 450px; margin: 0px auto;"></div>
+                            </div>
+                        </div>
+                        <div class="grid-stack-item" data-gs-x="0" data-gs-y="6" data-gs-width="4" data-gs-height="6">
+                            <div class="grid-stack-item-content">
+                                <div id="pieChart" style="height: 320px; max-width: 450px; margin: 0px auto;"></div>
+
+                            </div>
+                        </div>
+                        <div class="grid-stack-item" data-gs-x="4" data-gs-y="4" data-gs-width="4" data-gs-height="6">
+                            <div class="grid-stack-item-content">
+                                <div id="barChart" style="height: 320px; max-width: 450px; margin: 0px auto;"></div>
+                            </div>
+                        </div>
+                        <div class="grid-stack-item" data-gs-x="8" data-gs-y="4" data-gs-width="4" data-gs-height="6">
+                            <div class="grid-stack-item-content">
+                                <div id="columnChart" style="height: 320px; max-width: 450px; margin: 0px auto;"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--<div class="grid-stack">
+        <div class="grid-stack-item"
+             data-gs-x="0" data-gs-y="0"
+             data-gs-width="4" data-gs-height="2">
+            <div class="grid-stack-item-content"></div>
+        </div>
+        <div class="grid-stack-item"
+             data-gs-x="4" data-gs-y="0"
+             data-gs-width="4" data-gs-height="4">
+            <div class="grid-stack-item-content"></div>
+        </div>
+    </div>-->
+        <!--<div class="grid-stack">
+        <div class="grid-stack-item"
+             data-gs-x="0" data-gs-y="0"
+             data-gs-width="4" data-gs-height="2">
+            <div class="grid-stack-item-content"></div>
+        </div>
+        <div class="grid-stack-item"
+             data-gs-x="4" data-gs-y="0"
+             data-gs-width="4" data-gs-height="4">
+            <div class="grid-stack-item-content"></div>
+        </div>
+    </div>-->
+
+
+    </section>
+
+
+   
+
 </body>
 </html>
+<!--<script type="text/javascript">
+    $(function () {
+        var options = {
+            cellHeight: 80,
+            verticalMargin: 10
+        };
+        $('.grid-stack').gridstack(options);
+    });
+</script>-->
+<!--<script src="Scripts/gridstack.js"></script>
+<script src="Scripts/gridstack.jQueryUI.js"></script>-->
+
+
+
+<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/gridstack.js/0.2.5/gridstack.min.js"></script>
+
+<script type="text/javascript">
+
+    $(function () {
+        $('.grid-stack').gridstack({
+            width: 12,
+            cellHeight: 40,
+            alwaysShowResizeHandle: /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+        });
+    });
+
+    window.setTimeout(function () { $("#toload").html('4') }, 5000)
+
+    //$(function () {
+    //    var options = {
+    //        float: true,
+    //        width: 4,
+    //        height: 4,
+    //        animate: true,
+    //        always_show_resize_handle: true,
+    //        cellHeight: 110,
+    //        verticalMargin: 18,
+    //        horizontalMargin: 9,
+    //        placeholder_class: 'grid-stack-placeholder',
+    //        acceptWidgets: '.grid-stack-item'
+    //    };
+
+    //    $('.grid-stack').gridstack(_.defaults(options));
+
+    //    var items = [{
+    //        x: 0,
+    //        y: 0,
+    //        width: 1,
+    //        height: 1
+    //    }, {
+    //        x: 1,
+    //        y: 0,
+    //        width: 1,
+    //        height: 1
+    //    }, {
+    //        x: 2,
+    //        y: 0,
+    //        width: 1,
+    //            height: 1,
+    //        content:'Hello'
+    //    }, {
+    //        x: 0,
+    //        y: 1,
+    //        width: 1,
+    //        height: 1
+    //    }, {
+    //        x: 3,
+    //        y: 1,
+    //        width: 1,
+    //        height: 1
+    //    }, {
+    //        x: 1,
+    //        y: 2,
+    //        width: 1,
+    //        height: 1
+    //    }];
+
+    //    $('.grid-stack').each(function () {
+    //        var grid = $(this).data('gridstack');
+
+    //        _.each(items, function (node) {
+    //            grid.addWidget($('<div><div class="grid-stack-item-content" /><div/>'),
+    //                node.x, node.y, node.width, node.height);
+    //        }, this);
+    //    });
+
+    //    var sidebar_options = {
+    //        float: true,
+    //        width: 1,
+    //        cellHeight: 110,
+    //        verticalMargin: 18,
+    //        horizontalMargin: 9,
+    //        placeholder_class: 'grid-stack-placeholder',
+    //    };
+
+    //    $('.sidebar').gridstack(_.defaults(sidebar_options));
+
+    //    var droppables = [{
+    //        x: 0,
+    //        y: 0,
+    //        width: 1,
+    //        height: 1
+    //    }];
+
+    //    $('.sidebar').each(function () {
+    //        var sidebar = $(this).data('gridstack');
+
+    //        _.each(droppables, function (node) {
+    //            sidebar.addWidget($('<div><div class="grid-stack-item-content">I\'m new</div></div>'),
+    //                node.x, node.y, node.width, node.height);
+    //        }, this);
+    //    });
+    //});
+
+    //$(function () {
+    //    var options = {
+    //        float: true
+    //    };
+    //    $('.grid-stack').gridstack(options);
+
+    //    new function () {
+    //        this.items = [
+    //            { x: 0, y: 0, width: 2, height: 2 },
+    //            { x: 3, y: 1, width: 1, height: 2 },
+    //            { x: 4, y: 1, width: 1, height: 1 },
+    //            { x: 2, y: 3, width: 3, height: 1 },
+    //            //                    {x: 1, y: 4, width: 1, height: 1},
+    //            //                    {x: 1, y: 3, width: 1, height: 1},
+    //            //                    {x: 2, y: 4, width: 1, height: 1},
+    //            { x: 2, y: 5, width: 1, height: 1 }
+    //        ];
+
+    //        this.grid = $('.grid-stack').data('gridstack');
+
+    //        this.addNewWidget = function () {
+    //            var node = this.items.pop() || {
+    //                x: 12 * Math.random(),
+    //                y: 5 * Math.random(),
+    //                width: 1 + 3 * Math.random(),
+    //                height: 1 + 3 * Math.random()
+    //            };
+    //            this.grid.addWidget($('<div><div class="grid-stack-item-content" /><div/>'),
+    //                node.x, node.y, node.width, node.height);
+    //            return false;
+    //        }.bind(this);
+
+    //        $('#add-new-widget').click(this.addNewWidget);
+    //    };
+    //});
+
+
+
+    //$(function () {
+    //    // thanks to http://stackoverflow.com/a/22885503
+    //    var waitForFinalEvent = function () { var b = {}; return function (c, d, a) { a || (a = "I am a banana!"); b[a] && clearTimeout(b[a]); b[a] = setTimeout(c, d) } }();
+    //    var fullDateString = new Date();
+    //    function isBreakpoint(alias) {
+    //        return $('.device-' + alias).is(':visible');
+    //    }
+
+
+    //    var options = {
+    //        float: false
+    //    };
+    //    $('.grid-stack').gridstack(options);
+    //    function resizeGrid() {
+    //        var grid = $('.grid-stack').data('gridstack');
+    //        if (isBreakpoint('xs')) {
+    //            $('#grid-size').text('One column mode');
+    //        } else if (isBreakpoint('sm')) {
+    //            grid.setGridWidth(3);
+    //            $('#grid-size').text(3);
+    //        } else if (isBreakpoint('md')) {
+    //            grid.setGridWidth(6);
+    //            $('#grid-size').text(6);
+    //        } else if (isBreakpoint('lg')) {
+    //            grid.setGridWidth(12);
+    //            $('#grid-size').text(12);
+    //        }
+    //    };
+    //    $(window).resize(function () {
+    //        waitForFinalEvent(function () {
+    //            resizeGrid();
+    //        }, 300, fullDateString.getTime());
+    //    });
+
+    //    new function () {
+    //        this.serializedData = [
+    //            { x: 0, y: 0, width: 4, height: 2 },
+    //            { x: 3, y: 1, width: 4, height: 2 },
+    //            { x: 4, y: 1, width: 4, height: 1 },
+    //            { x: 2, y: 3, width: 8, height: 1 },
+    //            { x: 0, y: 4, width: 4, height: 1 },
+    //            { x: 0, y: 3, width: 4, height: 1 },
+    //            { x: 2, y: 4, width: 4, height: 1 },
+    //            { x: 2, y: 5, width: 4, height: 1 },
+    //            { x: 0, y: 6, width: 12, height: 1 }
+    //        ];
+
+    //        this.grid = $('.grid-stack').data('gridstack');
+
+    //        this.loadGrid = function () {
+    //            this.grid.removeAll();
+    //            var items = GridStackUI.Utils.sort(this.serializedData);
+    //            _.each(items, function (node, i) {
+    //                this.grid.addWidget($('<div><div class="grid-stack-item-content">' + i + '</div></div>'),
+    //                    node.x, node.y, node.width, node.height);
+    //            }, this);
+    //            return false;
+    //        }.bind(this);
+
+    //        this.loadGrid();
+    //        resizeGrid();
+    //    };
+    //});
+</script>
+<!--<script src="Scripts/chosen.jquery.js"></script>-->
+
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"></script>-->
+
+<script src="Scripts/canvasjs.min.js"></script>
+<script type="text/javascript">
+    console.log('Test1');
+    //window.onload = function () {
+    //    console.log('Test');
+    var pieChart = new CanvasJS.Chart("pieChart", {
+        exportEnabled: true,
+        animationEnabled: true,
+        title: {
+            text: "State Operating Funds"
+        },
+        legend: {
+            cursor: "pointer",
+            itemclick: explodePie
+        },
+        data: [{
+            type: "pie",
+            showInLegend: true,
+            toolTipContent: "{name}: <strong>{y}%</strong>",
+            indexLabel: "{name} - {y}%",
+            dataPoints: [
+                { y: 26, name: "School Aid", exploded: true },
+                { y: 20, name: "Medical Aid" },
+                { y: 5, name: "Debt/Capital" },
+                { y: 3, name: "Elected Officials" },
+                { y: 7, name: "University" },
+                { y: 17, name: "Executive" },
+                { y: 22, name: "Other Local Assistance" }
+            ]
+        }]
+    });
+    pieChart.render();
+
+
+    function explodePie(e) {
+        if (typeof (e.dataSeries.dataPoints[e.dataPointIndex].exploded) === "undefined" || !e.dataSeries.dataPoints[e.dataPointIndex].exploded) {
+            e.dataSeries.dataPoints[e.dataPointIndex].exploded = true;
+        } else {
+            e.dataSeries.dataPoints[e.dataPointIndex].exploded = false;
+        }
+        e.pieChart.render();
+
+    }
+
+    var chart = new CanvasJS.Chart("lineChart", {
+        animationEnabled: true,
+        theme: "light2",
+        title: {
+            text: "Simple Line Chart"
+        },
+        axisY: {
+            includeZero: false
+        },
+        data: [{
+            type: "line",
+            dataPoints: [
+                { y: 450 },
+                { y: 414 },
+                { y: 520, indexLabel: "highest", markerColor: "red", markerType: "triangle" },
+                { y: 460 },
+                { y: 450 },
+                { y: 500 },
+                { y: 480 },
+                { y: 480 },
+                { y: 410, indexLabel: "lowest", markerColor: "DarkSlateGrey", markerType: "cross" },
+                { y: 500 },
+                { y: 480 },
+                { y: 510 }
+            ]
+        }]
+    });
+    chart.render();
+
+      //  }
+
+
+    var splineChart = new CanvasJS.Chart("splineChart", {
+        animationEnabled: true,
+        title: {
+            text: "Music Album Sales by Year"
+        },
+        axisY: {
+            title: "Units Sold",
+            valueFormatString: "#0,,.",
+            suffix: "mn",
+            stripLines: [{
+                value: 3366500,
+                label: "Average"
+            }]
+        },
+        data: [{
+            yValueFormatString: "#,### Units",
+            xValueFormatString: "YYYY",
+            type: "spline",
+            dataPoints: [
+                { x: new Date(2002, 0), y: 2506000 },
+                { x: new Date(2003, 0), y: 2798000 },
+                { x: new Date(2004, 0), y: 3386000 },
+                { x: new Date(2005, 0), y: 6944000 },
+                { x: new Date(2006, 0), y: 6026000 },
+                { x: new Date(2007, 0), y: 2394000 },
+                { x: new Date(2008, 0), y: 1872000 },
+                { x: new Date(2009, 0), y: 2140000 },
+                { x: new Date(2010, 0), y: 7289000 },
+                { x: new Date(2011, 0), y: 4830000 },
+                { x: new Date(2012, 0), y: 2009000 },
+                { x: new Date(2013, 0), y: 2840000 },
+                { x: new Date(2014, 0), y: 2396000 },
+                { x: new Date(2015, 0), y: 1613000 },
+                { x: new Date(2016, 0), y: 2821000 },
+                { x: new Date(2017, 0), y: 2000000 }
+            ]
+        }]
+    });
+    splineChart.render();
+
+    var donutChart = new CanvasJS.Chart("donutChart", {
+        animationEnabled: true,
+        title: {
+            text: "Email Categories",
+            horizontalAlign: "left"
+        },
+        data: [{
+            type: "doughnut",
+            startAngle: 60,
+            //innerRadius: 60,
+            indexLabelFontSize: 17,
+            indexLabel: "{label} - #percent%",
+            toolTipContent: "<b>{label}:</b> {y} (#percent%)",
+            dataPoints: [
+                { y: 67, label: "Inbox" },
+                { y: 28, label: "Archives" },
+                { y: 10, label: "Labels" },
+                { y: 7, label: "Drafts" },
+                { y: 15, label: "Trash" },
+                { y: 6, label: "Spam" }
+            ]
+        }]
+    });
+    donutChart.render();
+
+    var barChart = new CanvasJS.Chart("barChart", {
+        animationEnabled: true,
+        title: {
+            text: "Military Expenditure of Countries: 2016"
+        },
+        axisX: {
+            interval: 1
+        },
+        axisY: {
+            title: "Expenses in Billion Dollars",
+            scaleBreaks: {
+                type: "wavy",
+                customBreaks: [{
+                    startValue: 80,
+                    endValue: 210
+                },
+                {
+                    startValue: 230,
+                    endValue: 600
+                }
+                ]
+            }
+        },
+        data: [{
+            type: "bar",
+            toolTipContent: "<img src='https://canvasjs.com/wp-content/uploads/images/gallery/javascript-column-bar-charts/'{url}' style='width:40px; height:20px;'> <b>{label}</b><br>Budget: ${y}bn<br>{gdp}% of GDP",
+            dataPoints: [
+                { label: "Israel", y: 17.8, gdp: 5.8, url: "israel.png" },
+                { label: "United Arab Emirates", y: 22.8, gdp: 5.7, url: "uae.png" },
+                { label: "Brazil", y: 22.8, gdp: 1.3, url: "brazil.png" },
+                { label: "Australia", y: 24.3, gdp: 2.0, url: "australia.png" },
+                { label: "South Korea", y: 36.8, gdp: 2.7, url: "skorea.png" },
+                { label: "Germany", y: 41.1, gdp: 1.2, url: "germany.png" },
+                { label: "Japan", y: 46.1, gdp: 1.0, url: "japan.png" },
+                { label: "United Kingdom", y: 48.3, gdp: 1.9, url: "uk.png" },
+                { label: "India", y: 55.9, gdp: 2.5, url: "india.png" },
+                { label: "Russia", y: 69.2, gdp: 5.3, url: "russia.png" },
+                { label: "China", y: 215.7, gdp: 1.9, url: "china.png" },
+                { label: "United States", y: 611.2, gdp: 3.3, url: "us.png" }
+            ]
+        }]
+    });
+    barChart.render();
+
+
+    var columnChart = new CanvasJS.Chart("columnChart", {
+        animationEnabled: true,
+        title: {
+            text: "Crude Oil Reserves vs Production, 2016"
+        },
+        axisY: {
+            title: "Billions of Barrels",
+            titleFontColor: "#4F81BC",
+            lineColor: "#4F81BC",
+            labelFontColor: "#4F81BC",
+            tickColor: "#4F81BC"
+        },
+        axisY2: {
+            title: "Millions of Barrels/day",
+            titleFontColor: "#C0504E",
+            lineColor: "#C0504E",
+            labelFontColor: "#C0504E",
+            tickColor: "#C0504E"
+        },
+        toolTip: {
+            shared: true
+        },
+        legend: {
+            cursor: "pointer",
+            itemclick: toggleDataSeries
+        },
+        data: [{
+            type: "column",
+            name: "Proven Oil Reserves (bn)",
+            legendText: "Proven Oil Reserves",
+            showInLegend: true,
+            dataPoints: [
+                { label: "Saudi", y: 266.21 },
+                { label: "Venezuela", y: 302.25 },
+                { label: "Iran", y: 157.20 },
+                { label: "Iraq", y: 148.77 },
+                { label: "Kuwait", y: 101.50 },
+                { label: "UAE", y: 97.8 }
+            ]
+        },
+        {
+            type: "column",
+            name: "Oil Production (million/day)",
+            legendText: "Oil Production",
+            axisYType: "secondary",
+            showInLegend: true,
+            dataPoints: [
+                { label: "Saudi", y: 10.46 },
+                { label: "Venezuela", y: 2.27 },
+                { label: "Iran", y: 3.99 },
+                { label: "Iraq", y: 4.45 },
+                { label: "Kuwait", y: 2.92 },
+                { label: "UAE", y: 3.1 }
+            ]
+        }]
+    });
+    columnChart.render();
+
+    function toggleDataSeries(e) {
+        if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+            e.dataSeries.visible = false;
+        }
+        else {
+            e.dataSeries.visible = true;
+        }
+        columnChart.render();
+    }
+
+
+</script>
+
+<script src="app.js"></script>
+
+

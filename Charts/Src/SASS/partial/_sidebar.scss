@@ -1,0 +1,13 @@
+﻿/// <reference path="../style.scss" />
+
+.sidebar-nav {
+  position:fixed;
+    top: 48px;
+    background: red;
+    width: 100px;
+    left: 0;
+    vertical-align:top;
+    background:#eaeaea;
+    border-right:1px solid #ddd;
+    height:calc(100% - 48px);
+}
